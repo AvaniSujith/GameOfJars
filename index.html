@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Jars and Balls game">
+    <title>Jars and Balls</title>
+    <link rel="icon" href="assets/freepik__background__55644.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <button id="toggleMusic" class="music-control-btn">
+            <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+        <nav class="nav">
+            <button class="home-btn">
+                <i class="fa-solid fa-house"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#" id="profile"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="#" id="instructions"><i class="fa-solid fa-book"></i> Instructions</a></li>
+                <li><a href="#" id="end-game"><i class="fa-solid fa-power-off"></i> End Game</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main">
+        <div class="container" id="setupContainer">
+            <div class="header-container">
+                <h1 class="game-title">Jars and Balls</h1>
+                <video autoplay muted loop playsinline id="video-logo">
+                    <source src="assets/Animation - 1736921066996.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <button class="play-btn" id="startGame">
+                <i class="fa-solid fa-play"></i>
+                <span>Start Game</span>
+            </button>
+
+            <!-- <button class="music-btn" id="toggleMusic">
+                <i class="fa-solid fa-volume-xmark"></i>
+            </button> -->
+            <audio id="backgroundMusic" preload="auto">
+                <source src="assets/Sakura-Girl-Daisy-chosic.com_.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div id="gameArea" class="game-area" style="display:none;">
+            <!-- <div id="message" class="message">Click a ball to select it</div> -->
+            
+            <div class="game-board">
+                <div id="jarContainer" class="jar-container"></div>
+                <div id="ballArray" class="ball-container"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">©2025 GamesofJars - All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
