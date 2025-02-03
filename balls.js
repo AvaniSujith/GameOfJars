@@ -5,7 +5,6 @@ document.getElementById("startGame").addEventListener("click", function() {
     document.querySelector(".play-btn").style.display = "none";
     document.querySelector("#video-logo").style.display = "none";
     
-    // Create the input container dynamically
     const inputContainer = document.createElement('div');
     inputContainer.classList.add('input-group');
     inputContainer.innerHTML = `
@@ -29,11 +28,11 @@ document.getElementById("startGame").addEventListener("click", function() {
     videoBackground.setAttribute('autoplay', 'true');
     videoBackground.setAttribute('loop', 'true');
     videoBackground.setAttribute('muted', 'true');
-    videoBackground.style.position = "fixed"; // Use fixed positioning to cover the entire viewport
+    videoBackground.style.position = "fixed";
     videoBackground.style.top = "0";
     videoBackground.style.left = "0";
-    videoBackground.style.width = "100vw";  // 100% of the viewport width
-    videoBackground.style.height = "100vh"; // 100% of the viewport height
+    videoBackground.style.width = "100vw";  
+    videoBackground.style.height = "100vh"; 
     videoBackground.style.zIndex = "-1"; 
     videoBackground.style.objectFit = "fill";
     videoBackground.innerHTML = `
@@ -52,5 +51,5 @@ const homeBtn = document.querySelector('.home-btn');
 const sidebar = document.querySelector('.sidebar');
 
 homeBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('show-sidebar'); // Show/hide sidebar
+    sidebar.classList.toggle('show-sidebar'); 
 });
